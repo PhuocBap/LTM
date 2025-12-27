@@ -215,7 +215,7 @@ Bài toán Chat giúp sinh viên hiểu rõ:">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://phuocbap.github.io/LTM/">Home</a>&nbsp;»&nbsp;<a href="https://phuocbap.github.io/LTM/posts/">Posts</a></div>
+    
     <h1 class="post-title entry-hint-parent">
       Bài 05 – Ứng dụng Chat Client – Server bằng Java
     </h1>
@@ -252,19 +252,6 @@ trao đổi tin nhắn với nhau thông qua giao thức TCP Socket.</p>
       <li><a href="https://phuocbap.github.io/LTM/tags/chat/">Chat</a></li>
       <li><a href="https://phuocbap.github.io/LTM/tags/socket/">Socket</a></li>
     </ul>
-<nav class="paginav">
-  <a class="prev" href="https://phuocbap.github.io/LTM/posts/bai-04-java-rmi/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Bài 04 – Java RMI và gọi phương thức từ xa</span>
-  </a>
-  <a class="next" href="https://phuocbap.github.io/LTM/posts/bai-06-js-network/">
-    <span class="title">Next »</span>
-    <br>
-    <span>Bài 06 – JavaScript và giao tiếp mạng</span>
-  </a>
-</nav>
-
   </footer>
 </article>
     </main>
@@ -343,53 +330,6 @@ trao đổi tin nhắn với nhau thông qua giao thức TCP Socket.</p>
         }
     })
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
 </script>
 </body>
 
