@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Java on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/java/</link>
+    <description>Recent content in Java on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 01 – Java Socket và ví dụ Client Server</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-01-java-socket/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-01-java-socket/</guid>
+      <description>&lt;h2 id=&#34;1-java-socket-là-gì&#34;&gt;1. Java Socket là gì?&lt;/h2&gt;
+&lt;p&gt;Socket cho phép hai chương trình giao tiếp qua mạng bằng IP và Port.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-mô-hình-hoạt-động&#34;&gt;2. Mô hình hoạt động&lt;/h2&gt;
+&lt;p&gt;Client → Server → Trả dữ liệu&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-code-server-chạy-được&#34;&gt;3. Code Server (chạy được)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.net.ServerSocket;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.net.Socket;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.io.DataInputStream;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args) &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ServerSocket server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ServerSocket(1234);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Server đang chạy...&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Socket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server.&lt;span style=&#34;color:#a6e22e&#34;&gt;accept&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        DataInputStream in &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; DataInputStream(socket.&lt;span style=&#34;color:#a6e22e&#34;&gt;getInputStream&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Client gửi: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; in.&lt;span style=&#34;color:#a6e22e&#34;&gt;readUTF&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        server.&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 03 – So sánh TCP và UDP trong Java</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-03-tcp-udp/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-03-tcp-udp/</guid>
+      <description>&lt;h2 id=&#34;tcp&#34;&gt;TCP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tin cậy&lt;/li&gt;
+&lt;li&gt;Dùng Socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;udp&#34;&gt;UDP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nhanh&lt;/li&gt;
+&lt;li&gt;Dùng DatagramSocket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DatagramSocket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; DatagramSocket();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 04 – Java RMI và gọi phương thức từ xa</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-04-java-rmi/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-04-java-rmi/</guid>
+      <description>&lt;h2 id=&#34;1-java-rmi-là-gì&#34;&gt;1. Java RMI là gì?&lt;/h2&gt;
+&lt;p&gt;RMI (Remote Method Invocation) là cơ chế cho phép một chương trình Java
+gọi phương thức của đối tượng đang chạy trên một máy khác trong mạng.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-nguyên-lý-hoạt-động&#34;&gt;2. Nguyên lý hoạt động&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Client gọi phương thức từ xa&lt;/li&gt;
+&lt;li&gt;Server thực thi phương thức&lt;/li&gt;
+&lt;li&gt;Kết quả được trả về qua mạng&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-interface-từ-xa-trong-rmi&#34;&gt;3. Interface từ xa trong RMI&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.rmi.Remote;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.rmi.RemoteException;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Remote {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String &lt;span style=&#34;color:#a6e22e&#34;&gt;sayHello&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; RemoteException;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 05 – Ứng dụng Chat Client – Server bằng Java</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-05-chat-socket/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-05-chat-socket/</guid>
+      <description>&lt;h2 id=&#34;1-mô-tả-bài-toán&#34;&gt;1. Mô tả bài toán&lt;/h2&gt;
+&lt;p&gt;Ứng dụng Chat Client – Server cho phép các máy tính trong mạng
+trao đổi tin nhắn với nhau thông qua giao thức TCP Socket.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-nguyên-lý-hoạt-động&#34;&gt;2. Nguyên lý hoạt động&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Server mở cổng và chờ kết nối&lt;/li&gt;
+&lt;li&gt;Client kết nối đến Server&lt;/li&gt;
+&lt;li&gt;Client gửi tin nhắn&lt;/li&gt;
+&lt;li&gt;Server nhận và hiển thị tin nhắn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-ý-nghĩa-trong-lập-trình-mạng&#34;&gt;3. Ý nghĩa trong lập trình mạng&lt;/h2&gt;
+&lt;p&gt;Bài toán Chat giúp sinh viên hiểu rõ:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bài 09 – Tổng kết môn Lập trình mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</guid>
+      <description>&lt;h2 id=&#34;1-nội-dung-đã-học&#34;&gt;1. Nội dung đã học&lt;/h2&gt;
+&lt;p&gt;Trong môn Lập trình mạng, em đã được tiếp cận các kiến thức nền tảng
+về cách các chương trình giao tiếp với nhau thông qua mạng máy tính.&lt;/p&gt;
+&lt;p&gt;Các nội dung chính bao gồm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lập trình Socket với Java&lt;/li&gt;
+&lt;li&gt;Giao thức TCP và UDP&lt;/li&gt;
+&lt;li&gt;Mô hình Client – Server&lt;/li&gt;
+&lt;li&gt;Java RMI và hệ thống phân tán&lt;/li&gt;
+&lt;li&gt;Giao tiếp mạng trong Web&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-ý-nghĩa-của-môn-học&#34;&gt;2. Ý nghĩa của môn học&lt;/h2&gt;
+&lt;p&gt;Môn học giúp em hiểu rõ nguyên lý hoạt động của các hệ thống mạng hiện đại,
+từ các ứng dụng nhỏ như Chat cho đến các hệ thống lớn như Web và dịch vụ phân tán.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Network on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/network/</link>
+    <description>Recent content in Network on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 01 – Java Socket và ví dụ Client Server</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-01-java-socket/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-01-java-socket/</guid>
+      <description>&lt;h2 id=&#34;1-java-socket-là-gì&#34;&gt;1. Java Socket là gì?&lt;/h2&gt;
+&lt;p&gt;Socket cho phép hai chương trình giao tiếp qua mạng bằng IP và Port.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-mô-hình-hoạt-động&#34;&gt;2. Mô hình hoạt động&lt;/h2&gt;
+&lt;p&gt;Client → Server → Trả dữ liệu&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-code-server-chạy-được&#34;&gt;3. Code Server (chạy được)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.net.ServerSocket;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.net.Socket;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.io.DataInputStream;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Server&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args) &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ServerSocket server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ServerSocket(1234);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Server đang chạy...&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Socket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server.&lt;span style=&#34;color:#a6e22e&#34;&gt;accept&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        DataInputStream in &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; DataInputStream(socket.&lt;span style=&#34;color:#a6e22e&#34;&gt;getInputStream&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Client gửi: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; in.&lt;span style=&#34;color:#a6e22e&#34;&gt;readUTF&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        server.&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 02 – Mô hình Client – Server trong lập trình mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-02-client-server/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-02-client-server/</guid>
+      <description>&lt;h2 id=&#34;1-khái-niệm&#34;&gt;1. Khái niệm&lt;/h2&gt;
+&lt;p&gt;Mô hình Client – Server là kiến trúc phổ biến trong lập trình mạng.&lt;/p&gt;
+&lt;p&gt;Client gửi yêu cầu, Server tiếp nhận và xử lý.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-ưu-điểm&#34;&gt;2. Ưu điểm&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quản lý dữ liệu tập trung&lt;/li&gt;
+&lt;li&gt;Dễ bảo trì&lt;/li&gt;
+&lt;li&gt;Dễ mở rộng hệ thống&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-nhược-điểm&#34;&gt;3. Nhược điểm&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Phụ thuộc vào Server&lt;/li&gt;
+&lt;li&gt;Server quá tải sẽ ảnh hưởng toàn hệ thống&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-ứng-dụng-thực-tế&#34;&gt;4. Ứng dụng thực tế&lt;/h2&gt;
+&lt;p&gt;Mô hình Client – Server được sử dụng trong:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bài 06 – JavaScript và giao tiếp mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-06-js-network/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-06-js-network/</guid>
+      <description>&lt;h2 id=&#34;javascript-trong-web&#34;&gt;JavaScript trong Web&lt;/h2&gt;
+&lt;p&gt;Giao tiếp server thông qua HTTP và WebSocket.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bài 08 – WebSocket và giao tiếp thời gian thực</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-08-websocket/</link>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-08-websocket/</guid>
+      <description>&lt;h2 id=&#34;1-websocket-là-gì&#34;&gt;1. WebSocket là gì?&lt;/h2&gt;
+&lt;p&gt;WebSocket là giao thức cho phép thiết lập kết nối hai chiều
+giữa Client và Server thông qua một kết nối TCP duy nhất.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-đặc-điểm-của-websocket&#34;&gt;2. Đặc điểm của WebSocket&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kết nối hai chiều (full-duplex)&lt;/li&gt;
+&lt;li&gt;Phù hợp cho ứng dụng thời gian thực&lt;/li&gt;
+&lt;li&gt;Giảm độ trễ so với HTTP truyền thống&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-ví-dụ-websocket-client-javascript&#34;&gt;3. Ví dụ WebSocket Client (JavaScript)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ws&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;WebSocket&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ws://localhost:8080&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ws&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;onopen&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Đã kết nối tới WebSocket Server&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ws&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;onmessage&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Server gửi:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ws&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;onclose&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Kết nối đã đóng&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 09 – Tổng kết môn Lập trình mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</guid>
+      <description>&lt;h2 id=&#34;1-nội-dung-đã-học&#34;&gt;1. Nội dung đã học&lt;/h2&gt;
+&lt;p&gt;Trong môn Lập trình mạng, em đã được tiếp cận các kiến thức nền tảng
+về cách các chương trình giao tiếp với nhau thông qua mạng máy tính.&lt;/p&gt;
+&lt;p&gt;Các nội dung chính bao gồm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lập trình Socket với Java&lt;/li&gt;
+&lt;li&gt;Giao thức TCP và UDP&lt;/li&gt;
+&lt;li&gt;Mô hình Client – Server&lt;/li&gt;
+&lt;li&gt;Java RMI và hệ thống phân tán&lt;/li&gt;
+&lt;li&gt;Giao tiếp mạng trong Web&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-ý-nghĩa-của-môn-học&#34;&gt;2. Ý nghĩa của môn học&lt;/h2&gt;
+&lt;p&gt;Môn học giúp em hiểu rõ nguyên lý hoạt động của các hệ thống mạng hiện đại,
+từ các ứng dụng nhỏ như Chat cho đến các hệ thống lớn như Web và dịch vụ phân tán.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

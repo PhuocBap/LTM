@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chat on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/chat/</link>
+    <description>Recent content in Chat on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/chat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 05 – Ứng dụng Chat Client – Server bằng Java</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-05-chat-socket/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-05-chat-socket/</guid>
+      <description>&lt;h2 id=&#34;1-mô-tả-bài-toán&#34;&gt;1. Mô tả bài toán&lt;/h2&gt;
+&lt;p&gt;Ứng dụng Chat Client – Server cho phép các máy tính trong mạng
+trao đổi tin nhắn với nhau thông qua giao thức TCP Socket.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-nguyên-lý-hoạt-động&#34;&gt;2. Nguyên lý hoạt động&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Server mở cổng và chờ kết nối&lt;/li&gt;
+&lt;li&gt;Client kết nối đến Server&lt;/li&gt;
+&lt;li&gt;Client gửi tin nhắn&lt;/li&gt;
+&lt;li&gt;Server nhận và hiển thị tin nhắn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-ý-nghĩa-trong-lập-trình-mạng&#34;&gt;3. Ý nghĩa trong lập trình mạng&lt;/h2&gt;
+&lt;p&gt;Bài toán Chat giúp sinh viên hiểu rõ:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

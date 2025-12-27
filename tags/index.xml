@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/</link>
+    <description>Recent content in Tags on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://phuocbap.github.io/LTM/tags/java/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://phuocbap.github.io/LTM/tags/javascript/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://phuocbap.github.io/LTM/tags/network/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebSocket</title>
+      <link>https://phuocbap.github.io/LTM/tags/websocket/</link>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/websocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTP</title>
+      <link>https://phuocbap.github.io/LTM/tags/http/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chat</title>
+      <link>https://phuocbap.github.io/LTM/tags/chat/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/chat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>https://phuocbap.github.io/LTM/tags/socket/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed</title>
+      <link>https://phuocbap.github.io/LTM/tags/distributed/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/distributed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RMI</title>
+      <link>https://phuocbap.github.io/LTM/tags/rmi/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/rmi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP</title>
+      <link>https://phuocbap.github.io/LTM/tags/tcp/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UDP</title>
+      <link>https://phuocbap.github.io/LTM/tags/udp/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/udp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client-Server</title>
+      <link>https://phuocbap.github.io/LTM/tags/client-server/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/tags/client-server/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

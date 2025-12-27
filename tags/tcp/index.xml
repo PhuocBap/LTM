@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TCP on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/tcp/</link>
+    <description>Recent content in TCP on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 03 – So sánh TCP và UDP trong Java</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-03-tcp-udp/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-03-tcp-udp/</guid>
+      <description>&lt;h2 id=&#34;tcp&#34;&gt;TCP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tin cậy&lt;/li&gt;
+&lt;li&gt;Dùng Socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;udp&#34;&gt;UDP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nhanh&lt;/li&gt;
+&lt;li&gt;Dùng DatagramSocket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DatagramSocket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; DatagramSocket();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on Blog Lập Trình Của Phước Bắp</title>
+    <link>https://phuocbap.github.io/LTM/tags/javascript/</link>
+    <description>Recent content in JavaScript on Blog Lập Trình Của Phước Bắp</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://phuocbap.github.io/LTM/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 06 – JavaScript và giao tiếp mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-06-js-network/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-06-js-network/</guid>
+      <description>&lt;h2 id=&#34;javascript-trong-web&#34;&gt;JavaScript trong Web&lt;/h2&gt;
+&lt;p&gt;Giao tiếp server thông qua HTTP và WebSocket.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bài 07 – Fetch API trong JavaScript</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-07-fetch-api/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-07-fetch-api/</guid>
+      <description>&lt;h2 id=&#34;1-fetch-api-là-gì&#34;&gt;1. Fetch API là gì?&lt;/h2&gt;
+&lt;p&gt;Fetch API là công cụ trong JavaScript dùng để gửi các yêu cầu HTTP
+từ trình duyệt đến Server và nhận dữ liệu phản hồi.&lt;/p&gt;
+&lt;p&gt;Trong lập trình mạng Web, Fetch API đóng vai trò là cầu nối giữa
+Client (trình duyệt) và Server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-ví-dụ-sử-dụng-fetch-api&#34;&gt;2. Ví dụ sử dụng Fetch API&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fetch&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://jsonplaceholder.typicode.com/posts/1&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;then&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt; =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt;())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#a6e22e&#34;&gt;then&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt; =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .&lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt; =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Lỗi:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Bài 09 – Tổng kết môn Lập trình mạng</title>
+      <link>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://phuocbap.github.io/LTM/posts/bai-09-tong-ket/</guid>
+      <description>&lt;h2 id=&#34;1-nội-dung-đã-học&#34;&gt;1. Nội dung đã học&lt;/h2&gt;
+&lt;p&gt;Trong môn Lập trình mạng, em đã được tiếp cận các kiến thức nền tảng
+về cách các chương trình giao tiếp với nhau thông qua mạng máy tính.&lt;/p&gt;
+&lt;p&gt;Các nội dung chính bao gồm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lập trình Socket với Java&lt;/li&gt;
+&lt;li&gt;Giao thức TCP và UDP&lt;/li&gt;
+&lt;li&gt;Mô hình Client – Server&lt;/li&gt;
+&lt;li&gt;Java RMI và hệ thống phân tán&lt;/li&gt;
+&lt;li&gt;Giao tiếp mạng trong Web&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-ý-nghĩa-của-môn-học&#34;&gt;2. Ý nghĩa của môn học&lt;/h2&gt;
+&lt;p&gt;Môn học giúp em hiểu rõ nguyên lý hoạt động của các hệ thống mạng hiện đại,
+từ các ứng dụng nhỏ như Chat cho đến các hệ thống lớn như Web và dịch vụ phân tán.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
